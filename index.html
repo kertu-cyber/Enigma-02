@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>O Presente Misterioso</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <main class="container">
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="tela ativa">
+
+            <div class="presente">🎁</div>
+
+            <h1>O Presente Misterioso</h1>
+
+            <p>
+                Existe um presente esperando por você...
+                <br><br>
+                Mas primeiro você precisa descobrir o que é.
+            </p>
+
+            <button id="btnComecar">
+                COMEÇAR O ENIGMA
+            </button>
+
+        </section>
+
+
+        <!-- PISTAS -->
+        <section id="pistas" class="tela">
+
+            <span class="numero" id="numeroPista">
+                PISTA 01
+            </span>
+
+            <h2 id="tituloPista">
+                Uma pequena dica...
+            </h2>
+
+            <div class="enigma">
+
+                <p id="textoPista">
+                    Algo está esperando para ser descoberto.
+                </p>
+
+            </div>
+
+            <input
+                type="text"
+                id="resposta"
+                placeholder="Qual é a sua resposta?"
+                autocomplete="off"
+            >
+
+            <button id="btnResponder">
+                TENTAR RESPONDER
+            </button>
+
+            <button id="btnProxima" class="botao-secundario">
+                PRÓXIMA PISTA
+            </button>
+
+            <p id="mensagem" class="mensagem"></p>
+
+        </section>
+
+
+        <!-- FINAL -->
+        <section id="final" class="tela">
+
+            <div class="confetes">
+                🎉
+            </div>
+
+            <div class="presente grande">
+                🎁
+            </div>
+
+            <h1>
+                PARABÉNS!
+            </h1>
+
+            <p>
+                Você descobriu o mistério!
+            </p>
+
+            <div class="resultado">
+
+                <span>
+                    Seu presente é...
+                </span>
+
+                <strong>
+                    🎵 GAITA 🎵
+                </strong>
+
+            </div>
+
+            <p class="final-texto">
+                Agora falta apenas uma coisa:
+                <br><br>
+
+                <b>
+                    abrir o presente de verdade! 😉
+                </b>
+            </p>
+
+            <button id="btnReiniciar">
+                JOGAR NOVAMENTE
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

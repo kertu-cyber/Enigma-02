@@ -1,0 +1,457 @@
+O Presente Misterioso — style.css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #29245c,
+            #0b0b19 65%
+        );
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ESTRELAS */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            circle,
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    opacity: 0.15;
+
+    pointer-events: none;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 92%;
+
+    max-width: 500px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* TELAS */
+
+.tela {
+    display: none;
+
+    text-align: center;
+
+    padding: 35px 25px;
+
+    background:
+        rgba(20, 20, 40, 0.90);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.5),
+
+        inset 0 0 30px
+        rgba(255,255,255,0.03);
+
+    animation:
+        aparecer 0.6s ease;
+}
+
+
+.tela.ativa {
+    display: block;
+}
+
+
+/* TÍTULOS */
+
+h1 {
+    font-size: 32px;
+
+    margin-bottom: 18px;
+}
+
+
+h2 {
+    font-size: 26px;
+
+    margin-bottom: 20px;
+}
+
+
+p {
+    color: #d8d8e8;
+
+    line-height: 1.6;
+}
+
+
+/* PRESENTE */
+
+.presente {
+    font-size: 90px;
+
+    margin-bottom: 15px;
+
+    animation:
+        flutuar
+        2.5s
+        ease-in-out
+        infinite;
+}
+
+
+.presente.grande {
+    font-size: 110px;
+}
+
+
+/* BOTÕES */
+
+button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c5cff,
+            #a855f7
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(124,92,255,0.4);
+}
+
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* BOTÃO SECUNDÁRIO */
+
+.botao-secundario {
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    color: #d8d8e8;
+}
+
+
+.botao-secundario:hover {
+    background:
+        rgba(255,255,255,0.13);
+
+    box-shadow: none;
+}
+
+
+/* ENIGMA */
+
+.enigma {
+    margin: 25px 0;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border-left:
+        4px solid
+        #8b5cf6;
+
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.enigma p {
+    font-size: 17px;
+}
+
+
+/* INPUT */
+
+input {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    outline: none;
+
+    background:
+        rgba(0,0,0,0.3);
+
+    color: white;
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+
+input:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 15px
+        rgba(139,92,246,0.25);
+}
+
+
+input::placeholder {
+    color: #88889b;
+}
+
+
+/* PISTA */
+
+.numero {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(139,92,246,0.2);
+
+    color: #bdaeff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+    min-height: 25px;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* RESULTADO */
+
+.resultado {
+    margin: 25px 0;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,92,255,0.2),
+            rgba(168,85,247,0.15)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+}
+
+
+.resultado span {
+    display: block;
+
+    color: #bbb;
+
+    margin-bottom: 10px;
+}
+
+
+.resultado strong {
+    display: block;
+
+    font-size: 36px;
+
+    color: #fff;
+
+    animation:
+        brilho
+        1.5s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+.final-texto {
+    margin-top: 15px;
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px);
+    }
+
+}
+
+
+@keyframes brilho {
+
+    from {
+        text-shadow:
+            0 0 5px #fff;
+    }
+
+    to {
+        text-shadow:
+            0 0 25px #a855f7;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 400px) {
+
+    .tela {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .presente {
+        font-size: 75px;
+    }
+
+    .presente.grande {
+        font-size: 90px;
+    }
+
+    .resultado strong {
+        font-size: 30px;
+    }
+
+}
